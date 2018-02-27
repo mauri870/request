@@ -1,4 +1,6 @@
-<?php namespace Lukzgois\Request;
+<?php 
+
+namespace Mauri870\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Factory;

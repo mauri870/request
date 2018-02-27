@@ -1,12 +1,16 @@
 {
-  "name": "lukzgois/request",
-  "description": "Extend Laravel 5's request.",
+  "name": "mauri870/request",
+  "description": "Extend Laravel 5's request class with support for custom validator rules.",
   "keywords": ["laravel", "request"],
   "license": "MIT",
   "authors": [
     {
       "name": "Lucas Padilha Gois",
       "email": "lucaspgois@gmail.com"
+    },
+    {
+      "name": "Mauri de Souza Nunes",
+      "email": "mauri870@gmail.com"
     }
   ],
   "require": {
@@ -18,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Lukzgois\\Request\\": "src/"
+      "Mauri870\\Request\\": "src/"
     }
   }
 }

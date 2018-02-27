@@ -10,7 +10,7 @@ Package that exteds the Laravel 5 FormRequest class to easily create custom vali
 In the `require` key of `composer.json` file add the following
 
 ```
-"lukzgois/request": "dev-master"
+"mauri870/request": "dev-master"
 ```
 
 Run the Composer update comand
@@ -19,10 +19,10 @@ Run the Composer update comand
 
 ## How to use
 
-Make your request extends the ```Lukzgois\Request\Request``` class.
+Make your request extends the ```Mauri870\Request\Request``` class.
 
 ```php
-use Lukzgois\Request\Request;
+use Mauri870\Request\Request;
 
 class MyRequest extends Request {
 ```
