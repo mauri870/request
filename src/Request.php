@@ -56,7 +56,6 @@ abstract class Request extends FormRequest {
         });
     }
 
-
     /**
      * Call the autoRegister method to register the custom rules and trigger the parent validate method.
      */
@@ -64,6 +63,15 @@ abstract class Request extends FormRequest {
     {
         $this->autoRegister();
         parent::validate();
+    }
+
+    /**
+     * Call the autoRegister method to register the custom rules and trigger the parent validate method.
+     */
+    public function validateResolved()
+    {
+        $this->autoRegister();
+        parent::validateResolved();
     }
 
 }
