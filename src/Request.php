@@ -14,7 +14,7 @@ abstract class Request extends FormRequest {
     /**
      * @var Factory The Validator Instance
      */
-    private $validator;
+    protected $validator;
 
     /**
      * Call the parent constructor and initialize the validator instance
