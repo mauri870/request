@@ -1,30 +1,21 @@
-<?php 
+<?php
 
 namespace Mauri870\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Factory;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * Class Request
- * @package Lukzgois\Request
+ * @package Mauri870\Request
  */
 abstract class Request extends FormRequest {
-
-    /**
-     * @var Factory The Validator Instance
-     */
-    protected $validator;
-
     /**
      * Call the parent constructor and initialize the validator instance
-     *
-     * @param Factory $validator
      */
-    public function __construct(Factory $validator)
+    public function __construct()
     {
         parent::__construct();
-        $this->validator = $validator;
     }
 
     /**
@@ -53,7 +44,7 @@ abstract class Request extends FormRequest {
 
         $validation = snake_case(substr($method, 8));
 
-        $this->validator->extend($validation, function($attribute, $value, $parameters) use ($method) {
+        Validator::extend($validation, function($attribute, $value, $parameters) use ($method) {
             return $this->$method($attribute, $value, $parameters);
         });
     }
